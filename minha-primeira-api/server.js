@@ -9,20 +9,20 @@ function itauna(request, response) {
 
     if (request.method === "GET" && URL.pathname === "/") { //metodo de requisiçao GET
         response.writeHead(200, { "Content-Type": "text/plain" })
-        response.end("Olá Mundo!")
+        response.end("Jhon me mama!")
         return;
     }
 
-        (request.method === "GET" && URL.pathname === "/alunos") {
-            //receber dados do body d requisiçao
-            //verificar se os dados "nome" e "idade" existem
-            //criar um numero aleatorio 1 a 1000
-            //criar um objeto contendo ID, nome, idade
-            //Vai salvar eçe dentro do mock "ALUNOS"
+    if (request.method === "GET" && URL.pathname === "/alunos") {
+        //receber dados do body d requisiçao
+        //verificar se os dados "nome" e "idade" existem
+        //criar um numero aleatorio 1 a 1000
+        //criar um objeto contendo ID, nome, idade
+        //Vai salvar eçe dentro do mock "ALUNOS"
 
-            //caso der erro ,  devolva
-            //se der sucesso devolva o objetivo criando!
-        }
+        //caso der erro ,  devolva
+        //se der sucesso devolva o objetivo criando!
+    }
 
 
     if (request.method === "GET" && URL.pathname === "/alunos") {
@@ -36,7 +36,7 @@ function itauna(request, response) {
 
             response.writeHead(200, { "Content-Type": "application/json" })
             return response.end(data);
-            
+
         });
         return
 
@@ -46,8 +46,9 @@ function itauna(request, response) {
 }
 
 const server = http.createServer(itauna)
+const port = 3000;
 
-server.listen(3000, () => console.log("servidor rodando!"));
+server.listen(port, () => console.log(`servidor rodando na porta: ${port}!`));
 
 
 //ATIVIDADE PARA CASA
